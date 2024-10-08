@@ -7,7 +7,9 @@ class myStory{
       this.places=places;
    }
 
-  
+   CompleteSentence() {
+      return `${this.subject} ${this.action} ${this.adjectives} ${this.objects} ${this.places}`;
+  }
 }
 
 //assigning our bottons
@@ -39,53 +41,85 @@ let counter3 = 0;
 let counter4 = 0;
 let counter5 = 0;
 
+//calling function with the bottons and assigning the return to a variable
+Btn1.onclick = () => { word1 = firstBotton(forBotton1) };
+Btn2.onclick = () => { word2 = secondBotton(forBotton2) };
+Btn3.onclick = () => { word3 = thirdBotton(forBotton3) };
+Btn4.onclick = () => { word4 = fourthBotton(forBotton4) };
+Btn5.onclick = () => { word5 = fifthBotton(forBotton5)};
+
 
 //function to display first array after first botton its press.
-function firstBotton (arrayToCheck){
- 
-   
+function firstBotton(arrayToCheck) {
 
-   if(counter>=arrayToCheck.length){
-      counter =0;
+   if (counter >= arrayToCheck.length) {
+      counter = 0;
    }
-   let countFromArray=counter;
+   let countFromArray = counter;
 
    document.querySelector('#Botton1').textContent = arrayToCheck[countFromArray];
-   counter ++;
+   counter++;
    return arrayToCheck[countFromArray];
 }
 
-Btn1.onclick = () => {word1=firstBotton(forBotton1)};
+
 
 //function to display second array after first botton its press.
-function secondBotton (arrayToCheck){
- 
-   
+function secondBotton(arrayToCheck) {
 
-   if(counter2>=arrayToCheck.length){
-      counter2 =0;
+   if (counter2 >= arrayToCheck.length) {
+      counter2 = 0;
    }
-   let countFromArray=counter2;
+   let countFromArray = counter2;
 
    document.querySelector('#Botton2').textContent = arrayToCheck[countFromArray];
-   counter2 ++;
+   counter2++;
    return arrayToCheck[countFromArray];
 }
 
-Btn2.onclick = () => {word2=secondBotton(forBotton2)};
+
 
 //function to display third array after first botton its press.
 function thirdBotton(arrayToCheck) {
    if (counter3 >= arrayToCheck.length) {
-       counter3 = 0; 
+      counter3 = 0;
    }
    let countFromArray = counter3;
 
-   
-   document.querySelector('#Botton3').textContent = arrayToCheck[countFromArray];
-   counter3++; 
 
-  
+   document.querySelector('#Botton3').textContent = arrayToCheck[countFromArray];
+   counter3++;
+
+
    return arrayToCheck[countFromArray];
 }
-Btn3.onclick = () => {word3 = thirdBotton(forBotton3);}
+
+//function to display fourth array after first botton its press.
+function fourthBotton(arrayToCheck) {
+   if (counter4 >= arrayToCheck.length) {
+       counter4 = 0; 
+   }
+   let countFromArray = counter4;
+
+   
+   document.querySelector('#Botton4').textContent = arrayToCheck[countFromArray];
+   counter4++; 
+
+   
+   return arrayToCheck[countFromArray];
+}
+
+//function to display fifth array after first botton its press.
+function fifthBotton(arrayToCheck) {
+   if (counter5 >= arrayToCheck.length) {
+       counter5 = 0; 
+   }
+   let countFromArray = counter5;
+
+   
+   document.querySelector('#Botton5').textContent = arrayToCheck[countFromArray];
+   counter5++; 
+
+   
+   return arrayToCheck[countFromArray];
+}
