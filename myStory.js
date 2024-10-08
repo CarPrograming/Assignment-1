@@ -9,6 +9,9 @@ const Btn5 = document.querySelector('#Btn5');
 const BottonSentence = document.querySelector('#BtnSentences');
 const BottonSentences = document.querySelector('#BottonSentences');
 
+const BtnRandom = document.querySelector('#BtnSentence');
+const displayRandom = document.querySelector('#BottonRandom');
+
 
 
 
@@ -40,6 +43,9 @@ Btn4.onclick = () => { word4 = fourthBotton(forBotton4) };
 Btn5.onclick = () => { word5 = fifthBotton(forBotton5)};
 //caling function to display full sentences
 BottonSentence.onclick = showSentences; 
+//calling Random function to display a sentences
+
+BtnRandom.onclick = () => randomSentences(forBotton1, forBotton2, forBotton3, forBotton4, forBotton5);
 
 
 //function to display first array after first botton its press.
@@ -121,6 +127,19 @@ function fifthBotton(arrayToCheck) {
 function showSentences() {
    const combinedWords = `${word1} ${word2} ${word3} ${word4} ${word5}`;
    document.querySelector('#BottonSentences').textContent = combinedWords;
+}
+
+//fucntion to get a random sencences
+function randomSentences(arrayOne, arrayTwo, arrayThree, arrayFour, arrayFive) {
+   //using math.ramdon to get a random value from the arrays
+   const randomWord1 = arrayOne[Math.floor(Math.random() * arrayOne.length)];
+   const randomWord2 = arrayTwo[Math.floor(Math.random() * arrayTwo.length)];
+   const randomWord3 = arrayThree[Math.floor(Math.random() * arrayThree.length)];
+   const randomWord4 = arrayFour[Math.floor(Math.random() * arrayFour.length)];
+   const randomWord5 = arrayFive[Math.floor(Math.random() * arrayFive.length)];
+
+   const combinedWords2 = `${randomWord1} ${randomWord2} ${randomWord3} ${randomWord4} ${randomWord5}`;
+   document.querySelector('#BottonRandom').textContent = combinedWords2; 
 }
 
 
