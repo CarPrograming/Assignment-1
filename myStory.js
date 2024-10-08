@@ -1,16 +1,4 @@
-class myStory{
-   constructor(Subject,action,adjectives,objects,places){
-      this.subject=subject;
-      this.action=action;
-      this.adjectives=adjective;
-      this.objects=objects;
-      this.places=places;
-   }
 
-   CompleteSentence() {
-      return `${this.subject} ${this.action} ${this.adjectives} ${this.objects} ${this.places}`;
-  }
-}
 
 //assigning our bottons
 const Btn1 = document.querySelector('#Btn1');
@@ -18,6 +6,9 @@ const Btn2 = document.querySelector('#Btn2');
 const Btn3 = document.querySelector('#Btn3');
 const Btn4 = document.querySelector('#Btn4');
 const Btn5 = document.querySelector('#Btn5');
+const BottonSentence = document.querySelector('#BtnSentences');
+const BottonSentences = document.querySelector('#BottonSentences');
+
 
 
 
@@ -47,6 +38,8 @@ Btn2.onclick = () => { word2 = secondBotton(forBotton2) };
 Btn3.onclick = () => { word3 = thirdBotton(forBotton3) };
 Btn4.onclick = () => { word4 = fourthBotton(forBotton4) };
 Btn5.onclick = () => { word5 = fifthBotton(forBotton5)};
+//caling function to display full sentences
+BottonSentence.onclick = showSentences; 
 
 
 //function to display first array after first botton its press.
@@ -123,3 +116,11 @@ function fifthBotton(arrayToCheck) {
    
    return arrayToCheck[countFromArray];
 }
+
+//function to combine words
+function showSentences() {
+   const combinedWords = `${word1} ${word2} ${word3} ${word4} ${word5}`;
+   document.querySelector('#BottonSentences').textContent = combinedWords;
+}
+
+
