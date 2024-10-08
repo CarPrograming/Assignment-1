@@ -19,7 +19,14 @@ const Btn5 = document.querySelector('#Btn5');
 
 
 
-let forBotton1 = ["manzana", "banana", "naranja"];
-Btn1.onclick = function(){
+let forBotton1 = ["The turkey", "Mom", "Dad", "The dog","My teacher","The elephant","The cat"];
+let forBotton2 =["sat on","ate","dance with","saw","doesn't like", "kissed"];
+let forBotton3 =["a funny", "a scary","a goofy","a slimy","a barking","a fat"];
+let forBotton4 =["goat","fish","cow","frog","bug","worm"];
+let forBotton5 =["on moon","on chair","in my spaghetti","in my soup","on the grass","in my shoes"];
+
+function firstBotton (firstArray){
    let counter = 0;
 }
+
+Btn1.onclick = firstBotton;
